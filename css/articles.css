@@ -1,0 +1,330 @@
+@charset "UTF-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Comfortaa', cursive;
+    scroll-behavior: smooth;
+    color: aqua;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    line-height: 1;
+    font-family: "";
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: "";
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/*=============ОБНУЛЕНИЕ СТИЛЕЙ=============*/
+
+body{
+    background-color: black;
+}
+
+
+
+/* .backgroundcontrol{
+    width: 100%;
+    height: 100vh;
+} */
+
+.backgroundcontrol::after{
+    content: "";
+    background: url(../img/bg2.png) center fixed no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    
+}
+
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header__upper{
+}
+
+.header__menu{
+    max-width: 1170px;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo{
+}
+
+.header__img{
+    height: 100px;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+}
+
+.header__nav a{
+    margin-right: 32.5px;
+    line-height: 25px
+}
+
+.header__nav a:last-child{
+    margin: 0;
+}
+
+.head__nav-menu{
+    color: #fff;
+    transition: .5s;
+    font-weight: 500;
+    display: block;
+}
+
+.head__nav-menu:hover{
+    color: #F86515;
+    
+
+    transform: scale(1.2);
+    width: 100%;
+}
+
+.head__nav-menu::before{
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 1px;
+    background: #F86515;
+    transition: .15s; 
+    
+    transform: scaleX(0);
+}
+
+.head__nav-menu:hover::before{
+    width: 100%;
+    transform: scaleX(1);
+}
+
+/*=================*/
+
+.container__cards{
+    
+}
+
+.country__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country__row-card{
+    position: relative;
+    margin-top: 39px;
+    flex: 1 1 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+    justify-content: center;
+
+    transition: .5s all;
+}
+
+.country__row-card:nth-child(1){
+    /* margin: 0px; */
+}
+
+/* .country__row-card:nth-child(1)::after{
+    content: '';
+    width: 2px;
+    height: 100%;
+    margin-left: 75px;
+    position: absolute;
+    background: #F86515;
+    transition: .15s;
+} */
+
+.country__row-card:nth-child(2){
+    /* margin: 0px; */
+}
+
+.card__title{
+}
+
+.flag__img{
+    position: relative;
+}
+
+.card__flag{
+    width: 500px;
+    height: 320px;
+    border-radius: 15px;
+    
+    transition: .2s;
+}
+
+.country__row-card-content{
+    position: absolute;
+    
+
+    transition: .9s;
+    transform: scale(0);
+}
+
+.country__row-card-content h3{
+    font-size: 23px;
+    text-align: center;
+    
+    line-height: 50px;
+    margin: 60px 0 0 0;
+    font-weight: 600;
+    color: #F86515;
+    text-shadow: 0px 0px 2px #E5A464 ;
+
+    transition: .5s all;
+}
+
+.country__row-card-content h3:hover{
+    color: #E5A464;
+}
+
+.title__flag {
+    z-index: 2;
+    font-size: 50px;
+    padding-bottom: 22px;
+
+    color: #fff;
+    text-shadow: 0px 0px 4px #E5A464 ;
+}
+
+
+.country__row-card:hover .country__row-card-content{
+    transform: scale(1);
+}
+
+
+.country__row-card:hover .card__flag{
+    filter: blur(3px);
+    
+}
+
+footer{
+    margin-top: 30px;
+    height: 55px;
+    background-color: rgba(0,0,0, 1);
+    width: 100%;
+
+}
+
+.footer__txt{
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: .7
+}
+
+
+
+
+
+
+
+
+
+
