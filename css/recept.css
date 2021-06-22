@@ -197,7 +197,6 @@ body{
     width: 100%;
     transform: scaleX(1);
 }
-
 /*  */
 
 .container h1{
@@ -209,24 +208,7 @@ body{
     margin-bottom: 20px;
 }
 
-.container h2{
-    font-size: 24px;
-
-    /* text-shadow: 2px 3px 3px #000; */
-    color: #fff;
-
-    margin-bottom: 20px;
-}
-
-.container h2 span{
-    color: rgb(235, 114, 114);
-
-    font-size: 28px;
-
-    text-decoration: underline;
-}
-
-.spisok {
+.spisok{
 	display: flex;
 	flex-wrap: wrap;
     border: 1px solid rgb(238, 146, 146);
@@ -235,6 +217,7 @@ body{
 
     margin-bottom: 30px;
 }
+
 .spisok__row {
     margin: 0 10px;
 	flex: 0 1 30%;
@@ -256,8 +239,19 @@ body{
     
 }
 
+.spisok__row-city ul img{
+	width: 25px;
+	margin-right: 10px;
+}
+
 .spisok__row-city ul li{
     margin-bottom: 7px;
+}
+
+.spisok__row-content{
+	display: flex;
+	align-items: center;
+	
 }
 
 .spisok__row-city ul li a{
@@ -265,6 +259,10 @@ body{
     text-shadow: 2px 3px 3px #000;
     color: #fff;
     transition: .4s;
+	display: flex;
+	align-items: center;
+	
+	
 }
 
 .spisok__row-city ul li a:hover{
@@ -275,97 +273,188 @@ body{
     margin: 0;
 }
 
-.spisok__row-city ul li a{
-    background: url(/img/res/placeholder.svg) no-repeat left;
+/* .spisok__row-city ul li a{
+    
     padding:  0 0 0 28px;
+} */
+
+.container h2{
+    font-size: 24px;
+
+    /* text-shadow: 2px 3px 3px #000; */
+    color: #fff;
+
+    margin-bottom: 20px;
 }
 
-.restourans__rows-content{
-    display: flex;
+.container h2 span{
+	color: rgb(235, 114, 114);
 
-    justify-content: space-between;
+	font-size: 28px;
 
-    margin-bottom: 30px;
+	text-decoration: underline;
 }
 
-.slider{
-    
+/*  */
+
+.recepts {
+}
+.recept__row {
+	position: relative;
+
+	margin-bottom: 80px;
 }
 
-.slide{
-    max-height: 333px;
-    max-width: 500px;
+.recept__row::after{
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: rgb(238, 146, 146);
 
-    
+	margin-top: 30px;
 }
 
-.photo img{
-    height: 333px;
-    width: 500px
+.recept__row h2{
+	margin-bottom: 10px;
+	font-size: 32px;
+
+	color: rgb(238, 146, 146);;
 }
 
-.restourans__rows-content-text{
-    padding-left: 20px;
-    height: 333px;
-    overflow: auto;
+.recept__row-content {
+	display: flex;
+
+	margin-bottom: 20px;
 }
 
-.restourans__rows-content-text::-webkit-scrollbar {
+.recept__row-content img{
+	max-width: 450px;
+	max-height: 320px;
+	border: 1px solid white;
+}
+
+.recept__row-text {
+}
+
+.ingrid{
+	margin-left: 20px;
+	
+}
+
+.ingrid ul{
+	height: 265px;
+	overflow: auto;
+}
+
+.ingrid ul::-webkit-scrollbar {
     width: 2px;
 }
 
-.restourans__rows-content-text::-webkit-scrollbar-track {
+.ingrid ul::-webkit-scrollbar-track {
     background: #ffffff;
     box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
 }
 
-.restourans__rows-content-text::-webkit-scrollbar-thumb {
+.ingrid ul::-webkit-scrollbar-thumb {
     background: rgb(238, 146, 146);
     border-radius: 5px;
 }
 
-.restourans__rows-content-text h2{
-    font-size: 38px;
-    margin-bottom: 5px;
-    color: rgb(238, 146, 146);
-}
-
-.restourans__rows-content-text h3{
-    font-size: 24px;
-
-    text-shadow: 2px 3px 3px #000;
+.ingrid ul li{
+	text-shadow: 2px 3px 3px #000;
     color: #fff;
-
-    margin-bottom: 5px;
+	font-size: 24px;
+	margin-bottom: 10px;
+	position: relative;
+	padding-left:20px;
 }
 
-.restourans__rows-content-text p{
-    text-shadow: 2px 3px 3px #000;
+.ingrid ul li:last-child{
+	margin: 0;
+}
+
+
+.ingrid ul li::before{
+	content: "";
+	
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: rgb(235, 114, 114);
+	top: 3px;
+	left: 0;
+	border-radius: 50%
+	
+}
+
+.ingrid h3{
+	color: rgb(238, 146, 146);
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.pocessing{
+	height: 300px;
+	overflow: auto;
+}
+
+.pocessing__footer{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	align-items: flex-end;
+}
+
+.pocessing__footer p{
+	font-size: 20px;
+	margin-left: 8px;
+
+	text-shadow: 2px 3px 3px #000;
     color: #fff;
-    font-size: 16px;
-
-    line-height: 23px;
 }
 
-.restourans__rows-content-text img{
-    width: 20px;
+.pocessing__footer img{
+	width: 23px;
+	margin-left: 5px;
 }
 
-.restourans__rows-content-text a{
-    color:rgb(238, 146, 146) ;
-    transition: .3s;
+.pocessing::-webkit-scrollbar {
+    width: 2px;
 }
 
-.restourans__rows-content-text a:hover{
-    color: rgb(240, 113, 113);
-    
+.pocessing::-webkit-scrollbar-track {
+    background: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
 }
 
-.restourans__rows-content-text span{
-    color: rgb(238, 146, 146);
+.pocessing::-webkit-scrollbar-thumb {
+    background: rgb(238, 146, 146);
+    border-radius: 5px;
+}
+
+.recept__row-text h3{
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 32px;
+
+	color: rgb(238, 146, 146);
 }
 
 
+.recept__row-text ol li{
+	margin-left: 26px;
+	margin-bottom: 15px;
+	
+	line-height: 25px;
+	text-shadow: 2px 3px 3px #000;
+    color: #fff;
+	font-size: 20px;
+}
+
+.recept__row-text ol li:last-child{
+	margin-bottom: 0;
+}
 
 .pages ul{
     display: flex;
